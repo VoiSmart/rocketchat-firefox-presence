@@ -1,0 +1,21 @@
+body { padding: 10px; }
+
+
+.fields {
+    padding: 5px;
+}
+
+.field {
+    padding: 5px;
+}
+
+.options {
+    width: 100%;
+    text-align: center;
+}
+
+.buttons {
+    padding: 5px;
+    margin: 0 auto;
+    display: inline-block;
+}

@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Chat Presence",
+  "version": "1.0",
+  "icons": {
+    "16": "icon_16.png",
+    "32": "icon_32.png",
+    "48": "icon_48.png",
+    "64": "icon_64.png",
+    "128": "icon_128.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "permissions": [
+    "idle",
+    "tabs",
+    "storage",
+    "*://*/*"
+  ],
+  "applications": {
+    "gecko": {
+      "id": "chat-presence-extension@voismart.it"
+    }
+  }
+}

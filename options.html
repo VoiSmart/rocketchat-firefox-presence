@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title data-i18n="Chat Presence"></title>
+	<link href="css/options.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="options" class="options">
+		<div class="fields">
+			<div class="field">
+				<label for='enable_on_url'>Enable on URL</label>:
+				<input id='enable_on_url' type='text' value="https://*/*" />
+			</div>
+			<div class="field">
+				<label for='idle_time'>Idle Timeout</label>:
+				<input id='idle_time' type='number' min="15" value="60" />
+			</div>
+		</div>
+		<div id="status"></div>
+		<div class='buttons'>
+			<button id="save">Save</button>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="options.js"></script>
+</body>
+
+</html>
