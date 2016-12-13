@@ -3,7 +3,7 @@ window.addEventListener("message", function (event) {
         return;
     }
 
-    if (event.data.type === "idlestatus")) {
+    if (event.data.type === "idlestatus") {
         var state = event.data.state;
         if (state === "idle") {
             UserPresence.setAway();
