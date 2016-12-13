@@ -12,15 +12,12 @@ On Rocket.Chat this snippet must be added into the client:
 
 ```javascript
 window.addEventListener("message", function (event) {
-    if (event.source !== window) { return; }
+    if ((event.source != window) || (event.data.name != 'rocketchat_presence')) {
+        return;
+    }
 
-    if (event.data.type && (event.data.type == "idlestatus")) {
-        // disabling the built in timer, use me!
-        UserPresence.stopTimer();
-        UserPresence.startTimer = function () { }
-
+    if (event.data.type === "idlestatus")) {
         var state = event.data.state;
-
         if (state === "idle") {
             UserPresence.setAway();
         } else if (state === "active") {
@@ -28,6 +25,12 @@ window.addEventListener("message", function (event) {
         } else if (state === "locked") {
             UserPresence.setAway();
         }
+
+    }
+    else if (event.data.rocketchat_presence_extension) {
+        // disabling the built in timer, use me!
+        UserPresence.stopTimer();
+        UserPresence.startTimer = function () { }
     }
 });
 ```

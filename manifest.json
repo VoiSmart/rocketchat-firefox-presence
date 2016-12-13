@@ -1,6 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Chat Presence",
+  "name": "VoiSmart Social Chat",
+  "short_name": "VoiSmartChat",
   "version": "1.0",
   "icons": {
     "16": "icon_16.png",
@@ -9,19 +10,28 @@
     "64": "icon_64.png",
     "128": "icon_128.png"
   },
+  "browser_action": {
+    "default_icon": {
+      "16": "icon_16.png",
+      "32": "icon_32.png",
+      "48": "icon_48.png",
+      "64": "icon_64.png",
+      "128": "icon_128.png"
+    }
+  },
   "background": {
     "scripts": [
       "background.js"
     ]
   },
   "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
+    "page": "options.html"
   },
   "permissions": [
     "idle",
     "tabs",
     "storage",
+    "alarms",
     "*://*/*"
   ],
   "applications": {
