@@ -1,9 +1,3 @@
-# *** WARNING ***
-Firefox (49 as now) has a bugged chrome.idle.queryState API,
-so this plugin will not work until release 51
-
-See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/idle/queryState
-
 # Chat Presence
 
 Uses the idle status from browser API to set presence.
